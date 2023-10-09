@@ -11,7 +11,7 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <main className="flex min-h-screen flex-col bg-[#121212] container mx-auto px-12 pt-24 pb-4">
+      <main className="flex min-h-screen flex-col container mx-auto px-12 pt-24 pb-4">
         <Hero />
         {/* <Achievements /> */}
         <About />

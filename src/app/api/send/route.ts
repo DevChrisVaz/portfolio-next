@@ -5,7 +5,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const sendMail = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
         const data = await resend.emails.send({
             from: 'Acme <onboarding@resend.dev>',
@@ -20,3 +20,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         res.status(400).json(error);
     }
 }
+
+export default sendMail;
